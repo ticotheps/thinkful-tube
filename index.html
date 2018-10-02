@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Thinkful Tube</title>
+    <link href="main.css" rel="stylesheet" type="text/CSS" />
+  </head>
+  <body>
+    <header role="banner">
+      <h1>Welcome to Thinkful Tube!</h1>
+    </header>
+    <main role="main">
+      <h2>You can use this website to search for YouTube videos!</h2>
+      <h3>Search using the box below!</h3>
+      <form action="#" class="js-search-form">
+        <label for="query"></label>
+        <input type="text" class="js-query">
+        <button type="submit">Search</button>
+      </form>
+      <h4>But how EXACTLY did we do this?</h4>
+      <p>Well, using your search term, we make a formal request and give it to YouTube's "API" (Application Programming Interface), which will then take our request to YouTube's database.</p>
+      <p>Next, YouTube's API tells its database to find all videos with keywords that match your search term.</p>
+      <p>Then, the database prepares a list of matching results and gives that list to YouTube's API.</p>
+      <p>Lastly, YouTube's API returns back to OUR website with that list, where we're able to display each resulting item for you via thumbnails!</p>
+      <h5>You can think of an "API" as a waiter that writes down your food order, takes that order to the chef in the kitchen for it to be prepared, and then returns with your prepared food!</h5>
+    </main>
+  </body>
+</html>
