@@ -2,29 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+    maximum-scale=1, user-scalable=no">
     <title>ThinkfulTube</title>
     <link href="main.css" rel="stylesheet" type="text/CSS" />
-    <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster+Two"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:600"
+      rel="stylesheet">
   </head>
   <body>
     <header role="banner">
-      <h1><span class="welcome-title">Welcome to</span> <span class="thinkful-title">Thinkful</span><span class="tube-title">Tube</span></h1>
+      <h1 class="welcome-title">Welcome to Tico's <span class="thinkful-title"
+        >Thinkful</span><span class="tube-title">Tube</span> web app!</h1>
     </header>
     <main role="main">
-      <h2>You can use this website to search for YouTube videos!</h2>
+      <h2>Use this website to search for your favorite YouTube videos!</h2>
       <form action="#" class="js-search-form">
         <label for="query"></label>
         <input type="text" class="js-query">
         <button type="submit" class="submit-button">Search</button>
       </form>
-      <h3>But how EXACTLY did we do this?</h3>
-      <p>Well, using your search term, we make a formal request and give it to YouTube's "API" (Application Programming Interface), which will then take our request to YouTube's database.</p>
-      <p>Next, YouTube's API tells its database to find all videos with keywords that match your search term.</p>
-      <p>Then, the database prepares a list of matching results and gives that list to YouTube's API.</p>
-      <p>Lastly, YouTube's API returns back to OUR website with that list, where we're able to display each resulting item for you via thumbnails!</p>
-      <h5>You can think of an "API" as a waiter that writes down your food order, takes that order to the chef in the kitchen for it to be prepared, and then returns with your prepared food!</h5>
     </main>
+    <section>
+      <h3>But HOW exactly are we able to do this?</h3>
+      <h4>With the power of an <a href="https://youtu.be/s7wmiS2mSXY"
+        target="_blank">API</a>!</h4>
+    </section>
+    <footer>
+      <h5>Created by Tico S. Thepsourinthone</h5>
+    </footer>
   </body>
 </html>
