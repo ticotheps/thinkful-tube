@@ -65,7 +65,7 @@ form {
 }
 
 .js-query {
-  width: 500px;
+  width: 400px;
 }
 
 .js-query, .submit-button {
@@ -78,7 +78,8 @@ form {
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 45px;
+  font-style: italic;
   font-family: 'Oswald', sans-serif;
 }
 
