@@ -1,4 +1,5 @@
 const YOUTUBE_SEARCH_URL = 'https://www.googleapis.com/youtube/v3/search';
+var myKey = config.MY_KEY;
 
 $(document).ready(function(){
   console.log('The web page has successfully loaded.');
@@ -7,7 +8,7 @@ $(document).ready(function(){
     const settings = {
       url: YOUTUBE_SEARCH_URL,
       part: 'snippet',
-      key: 'AIzaSyCgDg7VJayp6ckpidBxekWDs-Ur1u3sipw',
+      key: myKey
       data: {
         q: `${searchTerm} in:name`,
         per_page: 7
