@@ -64,11 +64,11 @@ form {
   cursor: pointer;
 }
 
-.js-query {
+.js-search-input {
   width: 400px;
 }
 
-.js-query, .submit-button {
+.js-search-input, .submit-button {
   font-size: 30px;
   font-family: 'Oswald', sans-serif;
   border-radius: 5px;
