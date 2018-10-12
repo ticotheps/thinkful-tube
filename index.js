@@ -1,5 +1,5 @@
 const YOUTUBE_SEARCH_URL = "https://www.googleapis.com/youtube/v3/search";
-var myKey = config.MY_KEY;
+var myKey = 'AIzaSyCgDg7VJayp6ckpidBxekWDs-Ur1u3sipw';
 
 $(document).ready(function(){
   console.log("The web page has successfully loaded.");
