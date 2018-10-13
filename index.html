@@ -5,27 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1,
     maximum-scale=1, user-scalable=no">
     <title>ThinkfulTube</title>
-    <link href="main.css" rel="stylesheet" type="text/CSS" />
     <link href="https://fonts.googleapis.com/css?family=Lobster+Two"
       rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:600"
       rel="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <link href="main.css" rel="stylesheet" type="text/CSS" />
   </head>
+
   <body>
     <header role="banner">
       <h1 class="welcome-title">Welcome to Tico's <span class="thinkful-title"
         >Thinkful</span><span class="tube-title">Tube</span> web app!</h1>
     </header>
+
     <main role="main">
       <h2>Use this website to search for your favorite YouTube videos!</h2>
       <form action="#" class="js-search-form">
         <label for="query"></label>
-        <input type="text" class="js-search-input">
-        <button type="submit" class="submit-button">Search</button>
+        <input type="text" class="js-query">
+        <button type="submit">Search</button>
       </form>
     </main>
-    <section class="js-search-section">
-      <h3>RESULTS</h3>
+
+    <section class="results-section">
+      <h3>YOUR RESULTS</h3>
       <div class="js-search-results">
 
       </div>
@@ -33,13 +40,11 @@
       <h4>With the power of an <a href="https://youtu.be/s7wmiS2mSXY"
         target="_blank">API</a>!</h4>
     </section>
+
     <footer>
       <h5>Created by Tico S. Thepsourinthone. 2018.</h5>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.js"
-      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-      crossorigin="anonymous"></script>
     <script src="index.js"></script>
   </body>
 </html>

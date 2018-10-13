@@ -1,70 +1,63 @@
-const YOUTUBE_SEARCH_URL = "https://www.googleapis.com/youtube/v3/search";
-var myKey = 'AIzaSyCgDg7VJayp6ckpidBxekWDs-Ur1u3sipw';
+const YOUTUBE_SEARCH_URL = 'https://www.googleapis.com/youtube/v3/search';
+const myKey = 'AIzaSyCgDg7VJayp6ckpidBxekWDs-Ur1u3sipw'
 
-$(document).ready(function(){
-  console.log("The web page has successfully loaded.");
+$(document).ready(function() {
+  console.log("The webpage has completed it's initial loading.");
 
-  //  This hides the RESULTS section element upon initial loading of the page.
-  $(".js-search-section").hide();
+  //  This hides the content of the RESULTS section until data is gathered
+  //  from the API.
+  $('.results-section').hide();
+})
 
-  //  This prevents the <form> element from default submission behavior.
-  $(document).on('submit', '.js-search-form', function(event){
-    console.log("A search query was submitted.");
+function getDataFromApi(searchTerm, callback) {
+  const settings = {
+    url: YOUTUBE_SEARCH_URL,
+    data: {
+      part: 'snippet',
+      key: myKey,
+      q: `${searchTerm} in:name`,
+      per_page: 5
+    },
+    dataType: 'json',
+    type: 'GET',
+    success: callback
+  };
+
+  $.ajax(settings);
+}
+
+function renderResult(result) {
+  //  This displays the content of the RESULTS section because data has now been
+  //  gathered from the API.
+  $('.results-section').show();
+
+  return `
+    <div>
+      <h4 class="js-video-title">${result.snippet.title}</h4>
+      <a href="https://www.youtube.com/watch?v=${result.id.videoId}"
+        target="_blank"><img class="js-thumbnail"
+        src="${result.snippet.thumbnails.medium.url}"
+        alt="Thumbnail of ${result.snippet.title} video">
+      </a>
+      <p class="js-channel-title">by ${result.snippet.channelTitle}</p>
+    </div>
+  `;
+}
+
+function displayGitHubSearchData(data) {
+  const results = data.items.map((item, index) => renderResult(item));
+  $('.js-search-results').html(results);
+}
+
+function watchSubmit() {
+  $('.js-search-form').submit(event => {
     event.preventDefault();
-
-    //  This creates a variable for the user's query.
-    const searchQuery = $(event.currentTarget).find(".js-search-input");
-
-    const searchWords = searchQuery.val();
-    console.log(searchWords);
-
-    //  This clears out the search input box.
-    searchQuery.val("");
-
-    getYouTubeData(searchWords, displayYouTubeData);
+    const queryTarget = $(event.currentTarget).find('.js-query');
+    const query = queryTarget.val();
+    // clear out the input
+    queryTarget.val("");
+    getDataFromApi(query, displayGitHubSearchData);
   });
+}
 
-});
-
-  function getYouTubeData(searchTerm, callback) {
-    console.log("The getYouTubeData function is running.");
-
-    const settings = {
-      url: YOUTUBE_SEARCH_URL,
-      data: {
-        part: "snippet",
-        key: myKey,
-        q: `${searchTerm} in:name`,
-        per_page: 5
-      },
-      dataType: 'json',
-      type: 'GET',
-      success: callback
-    };
-
-    $.ajax(settings);
-  }
-
-  function displayYouTubeData(data) {
-    console.log(`The API was successful in retrieving data and the
-      displayYouTubeData function is running.`);
-
-    //  This displays the RESULTS section element on the page.
-    $(".js-search-section").show();
-
-    const results = data.items.map(item, index);
-    console.log(results);
-
-    // $('.js-search-results').html(results);
-  }
-
-  // function renderResult(result) {
-  //   return `
-  //   <div>
-  //     <h2>
-  //     <a class="js-result-name" href="${result.html_url}" target="_blank">${result.name}</a> by <a class="js-user-name" href="${result.owner.html_url}" target="_blank">${result.owner.login}</a></h2>
-  //     <p>Number of watchers: <span class="js-watchers-count">${result.watchers_count}</span></p>
-  //     <p>Number of open issues: <span class="js-issues-count">${result.open_issues}</span></p>
-  //   </div>
-  // `;
-  // };
+$(watchSubmit);

@@ -54,21 +54,21 @@ form {
   padding-bottom: 20px;
 }
 
-.submit-button {
+button[type="submit"] {
   color: red;
 }
 
-.submit-button:hover {
+button[type="submit"]:hover {
   background-color: red;
   color: white;
   cursor: pointer;
 }
 
-.js-search-input {
+.js-query {
   width: 400px;
 }
 
-.js-search-input, .submit-button {
+.js-query, button[type="submit"] {
   font-size: 30px;
   font-family: 'Oswald', sans-serif;
   border-radius: 5px;
@@ -84,6 +84,7 @@ h3 {
 }
 
 .js-search-results {
+  color: red;
 }
 
 h4 {
@@ -99,4 +100,8 @@ h5 {
 
 a {
   color: blue;
+}
+
+p {
+  color: black;
 }
