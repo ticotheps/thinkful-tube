@@ -1,9 +1,20 @@
-const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';
+const YOUTUBE_SEARCH_URL = 'https://www.googleapis.com/youtube/v3/search';
+const myKey = 'AIzaSyCgDg7VJayp6ckpidBxekWDs-Ur1u3sipw'
+
+$(document).ready(function() {
+  console.log("The webpage has completed it's initial loading.");
+
+  //  This hides the content of the RESULTS section until data is gathered
+  //  from the API.
+  $('.results-section').hide();
+})
 
 function getDataFromApi(searchTerm, callback) {
   const settings = {
-    url: GITHUB_SEARCH_URL,
+    url: YOUTUBE_SEARCH_URL,
     data: {
+      part: 'snippet',
+      key: myKey,
       q: `${searchTerm} in:name`,
       per_page: 5
     },
@@ -16,12 +27,19 @@ function getDataFromApi(searchTerm, callback) {
 }
 
 function renderResult(result) {
+  //  This displays the content of the RESULTS section because data has now been
+  //  gathered from the API.
+  $('.results-section').show();
+
   return `
     <div>
-      <h2>
-      <a class="js-result-name" href="${result.html_url}" target="_blank">${result.name}</a> by <a class="js-user-name" href="${result.owner.html_url}" target="_blank">${result.owner.login}</a></h2>
-      <p>Number of watchers: <span class="js-watchers-count">${result.watchers_count}</span></p>
-      <p>Number of open issues: <span class="js-issues-count">${result.open_issues}</span></p>
+      <h4 class="js-video-title">${result.snippet.title}</h4>
+      <a href="https://www.youtube.com/watch?v=${result.id.videoId}"
+        target="_blank"><img class="js-thumbnail"
+        src="${result.snippet.thumbnails.medium.url}"
+        alt="Thumbnail of ${result.snippet.title} video">
+      </a>
+      <p class="js-channel-title">by ${result.snippet.channelTitle}</p>
     </div>
   `;
 }
