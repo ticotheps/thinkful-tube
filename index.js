@@ -32,14 +32,14 @@ function renderResult(result) {
   $('.results-section').show();
 
   return `
-    <div>
+    <div class="js-video-result">
       <h4 class="js-video-title">${result.snippet.title}</h4>
       <a href="https://www.youtube.com/watch?v=${result.id.videoId}"
         target="_blank"><img class="js-thumbnail"
-        src="${result.snippet.thumbnails.medium.url}"
+        src="${result.snippet.thumbnails.high.url}"
         alt="Thumbnail of ${result.snippet.title} video">
       </a>
-      <p class="js-channel-title">by ${result.snippet.channelTitle}</p>
+      <p class="js-channel-title">by "${result.snippet.channelTitle}"</p>
     </div>
   `;
 }
