@@ -33,13 +33,22 @@ function renderResult(result) {
 
   return `
     <div class="js-video-result">
-      <h4 class="js-video-title">${result.snippet.title}</h4>
-      <a href="https://www.youtube.com/watch?v=${result.id.videoId}"
-        target="_blank"><img class="js-thumbnail"
-        src="${result.snippet.thumbnails.high.url}"
-        alt="Thumbnail of ${result.snippet.title} video">
-      </a>
-      <p class="js-channel-title">by "${result.snippet.channelTitle}"</p>
+      <div class="js-video-banner">
+        <a href="https://www.youtube.com/watch?v=${result.id.videoId}"
+          target="_blank"><img class="js-thumbnail"
+          src="${result.snippet.thumbnails.default.url}"
+          alt="Thumbnail of ${result.snippet.title} video">
+        </a>
+        <h4 class="js-video-title">${result.snippet.title}</h4>
+      </div>
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/${result.id.videoId}"
+        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+      </iframe>
+      <p class="js-channel-title">Check out more videos from <a
+        href="https://www.youtube.com/channel/${result.snippet.channelId}"
+        target="_blank">
+        ${result.snippet.channelTitle}</a>'s YouTube Channel</p>
     </div>
   `;
 }
