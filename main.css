@@ -150,3 +150,103 @@ a {
 p {
   color: black;
 }
+
+@media only screen and (max-width: 700px) {
+  h1, .welcome-title, .thinkful-title, .tube-title, h2, form,
+  button[type="submit"], .js-query, h3, .js-search-results, .js-video-result,
+  .js-video-banner, .js-thumbnail, .js-video-title, .js-channel-title, h4, h5,
+  h6, a, p {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    }
+
+    h1 {
+      font-size: 38px;
+    }
+
+    .welcome-title {
+      font-size: 38px;
+    }
+
+    .thinkful-title {
+      font-size: 30px;
+      padding-right: 4px;
+      margin-left: 10px;
+    }
+
+    .tube-title {
+      font-size: 30px;
+      padding-left: 3px;
+      padding-right: 3px;
+      margin-right: 7px;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-top: 38px;
+      margin-bottom: 38px;
+    }
+
+    form {
+      padding-bottom: 10px;
+    }
+
+    .js-query {
+      width: 200px;
+    }
+
+    .js-query, button[type="submit"] {
+      font-size: 15px;
+      margin-right: 5px;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    h3 {
+      font-size: 28px;
+    }
+
+    .js-video-result {
+      margin-left: 75px;
+      margin-right: 75px;
+      border-radius: 7px;
+      margin-top: 8px;
+    }
+
+    .js-video-banner {
+      padding-left: 10px;
+      padding-top: 10px;
+    }
+
+    .js-thumbnail {
+      border-radius: 7px;
+    }
+
+    .js-thumbnail:hover {
+      border: solid 3px blue;
+    }
+
+    .js-video-title {
+      font-size: 23px;
+      margin-top: 0px;
+      margin-left: 10px;
+      margin-right: 10px;
+      border-radius: 7px;
+      padding: 6px 10px 6px 10px;
+    }
+
+    .js-channel-title {
+      font-size: 18px;
+    }
+
+    h4, h5 {
+      font-size: 23px;
+    }
+
+    h6 {
+      margin-top: 50px;
+      font-size: 9px;
+    }
+
+}
