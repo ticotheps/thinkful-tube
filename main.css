@@ -18,10 +18,23 @@ h1 {
   font-style: italic;
 }
 
+.logo-link {
+  position: absolute;
+  left: 480px;
+  width: 475px;
+  height: 130px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
 .thinkful-title {
   font-family: 'Oswald', sans-serif;
   font-style: normal;
-  font-size: 60px;
+  font-size: 85px;
   padding-right: 8px;
   margin-left: 20px;
 }
@@ -29,7 +42,7 @@ h1 {
 .tube-title {
   font-family: 'Oswald', sans-serif;
   font-style: normal;
-  font-size: 60px;
+  font-size: 85px;
   background-color: red;
   color: white;
   border: solid red 2px;
@@ -46,12 +59,12 @@ h1 {
 h2 {
   font-size: 35px;
   font-family: 'Oswald', sans-serif;
-  margin-top: 75px;
+  margin-top: 85px;
   margin-bottom: 75px;
 }
 
 form {
-  padding-bottom: 20px;
+  margin-top: 100px;
 }
 
 button[type="submit"] {
@@ -65,7 +78,7 @@ button[type="submit"]:hover {
 }
 
 .js-query {
-  width: 400px;
+  width: 475px;
 }
 
 .js-query, button[type="submit"] {
@@ -138,7 +151,7 @@ h5 {
 }
 
 h6 {
-  margin-top: 100px;
+  margin-top: 150px;
   font-size: 18px;
   font-style: italic;
 }
@@ -152,13 +165,16 @@ p {
 }
 
 @media only screen and (max-width: 700px) {
-  h1, .welcome-title, .thinkful-title, .tube-title, h2, form,
+  header, h1, .welcome-title, .thinkful-title, .tube-title, h2, form,
   button[type="submit"], .js-query, h3, .js-search-results, .js-video-result,
   .js-video-banner, .js-thumbnail, .js-video-title, .js-channel-title, h4, h5,
   h6, a, p {
     display: block;
     width: 90%;
     margin: 10px auto;
+    }
+
+    header {
     }
 
     h1 {
@@ -170,16 +186,16 @@ p {
     }
 
     .thinkful-title {
-      font-size: 30px;
-      padding-right: 4px;
+      font-size: 50px;
+      padding-right: 0px;
       margin-left: 10px;
     }
 
     .tube-title {
-      font-size: 30px;
-      padding-left: 3px;
-      padding-right: 3px;
-      margin-right: 7px;
+      font-size: 50px;
+      padding-left: 0px;
+      padding-right: 0px;
+      width: 175px;
     }
 
     h2 {
