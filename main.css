@@ -7,15 +7,9 @@ body {
 }
 
 h1 {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  font-size: 75px
-}
-
-.welcome-title {
-  font-family: 'Lobster Two', cursive;
-  font-size: 75px;
-  font-style: italic;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 85px;
 }
 
 .logo-link {
