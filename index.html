@@ -31,7 +31,7 @@
     <main role="main">
       <form action="#" class="js-search-form">
         <label for="query"></label>
-        <input type="text" class="js-query">
+        <input type="text" class="js-query" required>
         <button type="submit">Search</button>
       </form>
       <h2>Search for your favorite YouTube videos here!</h2>
@@ -42,14 +42,16 @@
       <div class="js-search-results">
 
       </div>
-      <h4>But HOW are we able to do this?</h4>
-      <h5>With the power of an <a href="https://youtu.be/s7wmiS2mSXY"
-        target="_blank">API</a>!</h5>
+      <div>
+        <h4>But HOW are we able to do this?</h4>
+        <h5>With an <a class="api" href="https://youtu.be/s7wmiS2mSXY"
+          target="_blank">API</a>!</h5>
+      </div>
     </section>
 
     <footer>
-      <h6>Created by <a href="https://github.com/ticotheps/" target="_blank">
-        Tico S. Thepsourinthone.</a> 2018.</h6>
+      <h6>Created by <a class="tico" href="https://github.com/ticotheps/"
+        target="_blank">Tico S. Thepsourinthone.</a> 2018.</h6>
     </footer>
 
     <script src="index.js"></script>

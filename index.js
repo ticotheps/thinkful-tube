@@ -45,10 +45,10 @@ function renderResult(result) {
         src="https://www.youtube.com/embed/${result.id.videoId}"
         frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
       </iframe>
-      <p class="js-channel-title">Check out more videos from <a
+      <p class="js-channel-title">Check out more videos from the <a
         href="https://www.youtube.com/channel/${result.snippet.channelId}"
         target="_blank">
-        ${result.snippet.channelTitle}</a>'s YouTube Channel</p>
+        ${result.snippet.channelTitle}</a> YouTube Channel</p>
     </div>
   `;
 }

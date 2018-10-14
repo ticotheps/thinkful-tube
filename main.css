@@ -161,18 +161,23 @@ p {
 @media only screen and (max-width: 700px) {
   header, h1, .welcome-title, .thinkful-title, .tube-title, h2, form,
   button[type="submit"], .js-query, h3, .js-search-results, .js-video-result,
-  .js-video-banner, .js-thumbnail, .js-video-title, .js-channel-title, h4, h5,
-  h6, a, p {
+  .js-video-banner, .js-thumbnail, iframe, .js-video-title, .js-channel-title,
+  .api, h4, h5, h6, a, p {
     display: block;
     width: 90%;
     margin: 10px auto;
     }
 
-    header {
+    h1 {
+      font-size: 65px;
+      margin: 5px;
     }
 
-    h1 {
-      font-size: 38px;
+    .logo-link {
+      position: absolute;
+      left: 0;
+      width: 375px;
+      height: 125px;
     }
 
     .welcome-title {
@@ -189,6 +194,7 @@ p {
       font-size: 50px;
       padding-left: 0px;
       padding-right: 0px;
+      margin-right: 10px;
       width: 175px;
     }
 
@@ -202,26 +208,29 @@ p {
       padding-bottom: 10px;
     }
 
-    .js-query {
-      width: 200px;
+    .js-query, button[type="submit"] {
+      font-size: 30px;
     }
 
-    .js-query, button[type="submit"] {
-      font-size: 15px;
-      margin-right: 5px;
-      padding-left: 8px;
-      padding-right: 8px;
+    .js-query {
+      width: 335px;
+      margin-top: 50px;
+    }
+
+    button[type="submit"] {
+      width: 275px;
+      margin-top: 35px;
     }
 
     h3 {
-      font-size: 28px;
+      font-size: 30px;
     }
 
     .js-video-result {
-      margin-left: 75px;
-      margin-right: 75px;
+      display: flex;
+      flex-direction: column;
       border-radius: 7px;
-      margin-top: 8px;
+      width: 100%;
     }
 
     .js-video-banner {
@@ -231,23 +240,31 @@ p {
 
     .js-thumbnail {
       border-radius: 7px;
-    }
-
-    .js-thumbnail:hover {
-      border: solid 3px blue;
+      width: 250px;
     }
 
     .js-video-title {
       font-size: 23px;
-      margin-top: 0px;
-      margin-left: 10px;
-      margin-right: 10px;
       border-radius: 7px;
       padding: 6px 10px 6px 10px;
+      width: 100%;
+    }
+
+    iframe {
+      width: 280px;
+      height: 157px;
     }
 
     .js-channel-title {
       font-size: 18px;
+    }
+
+    .api, .tico {
+      display: inline;
+    }
+
+    h4 {
+      margin-top: 75px;
     }
 
     h4, h5 {
@@ -255,8 +272,8 @@ p {
     }
 
     h6 {
-      margin-top: 50px;
-      font-size: 9px;
+      margin-top: 100px;
+      font-size: 18px;
     }
 
 }
