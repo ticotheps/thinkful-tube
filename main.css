@@ -199,14 +199,13 @@ p {
     }
 
     h2 {
-      font-size: 18px;
+      font-size: 24px;
       margin-top: 38px;
       margin-bottom: 38px;
     }
 
     form {
       padding-bottom: 10px;
-      margin-left: 13px;
     }
 
     .js-query, button[type="submit"] {
