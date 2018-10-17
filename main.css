@@ -14,18 +14,19 @@ h1 {
 
 .logo-link {
   position: absolute;
-  left: 480px;
-  width: 475px;
+  left: 385px;
+  width: 675px;
   height: 130px;
 }
 
 .logo-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 0px;
 }
 
-.thinkful-title {
+.tico-title, .thinkful-title {
   font-family: 'Oswald', sans-serif;
   font-style: normal;
   font-size: 85px;
@@ -50,6 +51,15 @@ h1 {
   margin-right: 15px;
 }
 
+.instruct-above-search {
+  margin-top: 100px;
+  margin-bottom: 0px;
+}
+
+.instruct-below-search {
+  margin-top: 50px;
+}
+
 h2 {
   font-size: 35px;
   font-family: 'Oswald', sans-serif;
@@ -58,7 +68,8 @@ h2 {
 }
 
 form {
-  margin-top: 100px;
+  margin-top: 50px;
+  margin-bottom: 0px;
 }
 
 button[type="submit"] {
@@ -159,7 +170,8 @@ p {
 }
 
 @media only screen and (max-width: 700px) {
-  header, h1, .welcome-title, .thinkful-title, .tube-title, h2, form,
+  header, .logo-link, .tico-title, .tico-title-h1, .thinkful-title, .tube-title,
+  .instruct-above-search, .instruct-below-search, h2, form,
   button[type="submit"], .js-query, h3, .js-search-results, .js-video-result,
   .js-video-banner, .js-thumbnail, iframe, .js-video-title, .js-channel-title,
   .api, h4, h5, h6, a, p {
@@ -168,34 +180,51 @@ p {
     margin: 10px auto;
     }
 
-    h1 {
-      font-size: 65px;
-      margin: 5px;
-    }
-
     .logo-link {
       position: absolute;
       left: 0;
       width: 375px;
-      height: 125px;
+      height: 255px;
     }
 
-    .welcome-title {
-      font-size: 38px;
+    .tico-title {
+      margin: 5px;
+    }
+
+    .tico-title-h1 {
+      font-size: 85px;
     }
 
     .thinkful-title {
-      font-size: 50px;
+      display: inline-block;
       padding-right: 0px;
       margin-left: 10px;
+      margin-right: 10px;
+      width: 150px;
+
+    }
+
+    .thinkful-title-h1, .tube-title-h1 {
+      font-size: 55px;
     }
 
     .tube-title {
+      display: inline-block;
       font-size: 50px;
       padding-left: 0px;
       padding-right: 0px;
       margin-right: 10px;
-      width: 175px;
+      width: 120px;
+    }
+
+    .instruct-above-search {
+      margin-top: 50px;
+      margin-bottom: 0px;
+    }
+
+    .instruct-below-search {
+      margin-top: 25px;
+      margin-bottom: 40px;
     }
 
     h2 {

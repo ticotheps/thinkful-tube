@@ -18,24 +18,31 @@
 
   <body>
     <header role="banner">
-      <a href="https://github.com/ticotheps/thinkful-tube" target="_blank">
-        <div class="logo-link">
-        </div>
-      </a>
+      <div id="blank-overlay">
+        <a href="https://github.com/ticotheps/thinkful-tube"
+          target="_blank" aria-labelledby="blank-overlay clickable-logo">
+          <div class="logo-link">
+
+          </div></a>
+      </div>
       <div class="logo-container">
-        <span class="thinkful-title"><h1>Thinkful</h1></span>
-        <span class="tube-title"><h1>Tube</h1></span>
+        <div class="tico-title"><h1 class="tico-title-h1">Tico's</h1></div>
+        <span class="thinkful-title"><h1 class="thinkful-title-h1">Thinkful
+          </h1></span>
+        <span class="tube-title"><h1 class="tube-title-h1">Tube</h1></span>
       </div>
     </header>
 
     <main role="main">
+      <h2 class="instruct-above-search">Use THIS website like you would YouTube's website!</h2>
       <form action="#" class="js-search-form" id="user-input">
         <label for="query" aria-labelledby="user-input query"></label>
         <input type="text" class="js-query" id="query"
           ria-labelledby="user-input query" required>
         <button type="submit">Search</button>
       </form>
-      <h2>Search for your favorite YouTube videos here!</h2>
+      <h2 class="instruct-below-search">Using the text box above, search for YouTube videos and have them
+        displayed below!</h2>
     </main>
 
     <section class="results-section">
@@ -44,7 +51,7 @@
 
       </div>
       <div>
-        <h4>But HOW are we able to do this?</h4>
+        <h4>HOW did I do this?</h4>
         <h5>With an <a class="api" href="https://youtu.be/s7wmiS2mSXY"
           target="_blank">API</a>!</h5>
       </div>
