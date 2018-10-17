@@ -29,9 +29,10 @@
     </header>
 
     <main role="main">
-      <form action="#" class="js-search-form">
-        <label for="query"></label>
-        <input type="text" class="js-query" required>
+      <form action="#" class="js-search-form" id="user-input">
+        <label for="query" aria-labelledby="user-input query"></label>
+        <input type="text" class="js-query" id="query"
+          ria-labelledby="user-input query" required>
         <button type="submit">Search</button>
       </form>
       <h2>Search for your favorite YouTube videos here!</h2>
