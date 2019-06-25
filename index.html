@@ -1,65 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1,
-    maximum-scale=1, user-scalable=no">
-    <title>ThinkfulTube</title>
-    <link href="https://fonts.googleapis.com/css?family=Lobster+Two"
-      rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:600"
-      rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+    maximum-scale=1, user-scalable=no"
+    />
+    <title>TicoTube</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster+Two"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:600"
+      rel="stylesheet"
+    />
     <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
     <link href="main.css" rel="stylesheet" type="text/CSS" />
   </head>
 
   <body>
     <header role="banner">
       <div id="blank-overlay">
-        <a href="https://github.com/ticotheps/thinkful-tube"
-          target="_blank" aria-labelledby="blank-overlay clickable-logo">
-          <div class="logo-link">
-
-          </div></a>
+        <a
+          href="https://github.com/ticotheps/tico-tube"
+          target="_blank"
+          aria-labelledby="blank-overlay clickable-logo"
+        >
+          <div class="logo-link"></div
+        ></a>
       </div>
       <div class="logo-container">
-        <div class="tico-title"><h1 class="tico-title-h1">Tico's</h1></div>
-        <span class="thinkful-title"><h1 class="thinkful-title-h1">Thinkful
-          </h1></span>
+        <div class="tico-title"><h1 class="tico-title-h1">Welcome to</h1></div>
+        <span class="thinkful-title"
+          ><h1 class="thinkful-title-h1">Tico</h1></span
+        >
         <span class="tube-title"><h1 class="tube-title-h1">Tube</h1></span>
       </div>
     </header>
 
     <main role="main">
-      <h2 class="instruct-above-search">Use THIS website like you would YouTube's website!</h2>
+      <h2 class="instruct-above-search">
+        Try searching for your favorite YouTube videos!
+      </h2>
       <form action="#" class="js-search-form" id="user-input">
         <label for="query" aria-labelledby="user-input query"></label>
-        <input type="text" class="js-query" id="query"
-          ria-labelledby="user-input query" required>
+        <input
+          type="text"
+          class="js-query"
+          id="query"
+          ria-labelledby="user-input query"
+          required
+        />
         <button type="submit">Search</button>
       </form>
-      <h2 class="instruct-below-search">Using the text box above, search for YouTube videos and have them
-        displayed below!</h2>
+      <!-- <h2 class="instruct-below-search">
+        Using the text box above, search for YouTube videos and have them
+        displayed below!
+      </h2> -->
     </main>
 
     <section class="results-section" aria-live="assertive" hidden>
       <h3>YOUR TOP 5 RESULTS!</h3>
-      <div class="js-search-results">
-
-      </div>
+      <div class="js-search-results"></div>
       <div>
         <h4>HOW did I do this?</h4>
-        <h5>With an <a class="api" href="https://youtu.be/s7wmiS2mSXY"
-          target="_blank">API</a>!</h5>
+        <h5>
+          With the YouTube API!
+        </h5>
+        <h5>
+          Click
+          <a class="api" href="https://youtu.be/s7wmiS2mSXY" target="_blank"
+            >here</a
+          >
+          to learn more about APIs!
+        </h5>
       </div>
     </section>
 
     <footer>
-      <h6>Created by <a class="tico" href="https://github.com/ticotheps/"
-        target="_blank">Tico S. Thepsourinthone.</a> 2018.</h6>
+      <h6>
+        Created by
+        <a class="tico" href="https://github.com/ticotheps/" target="_blank"
+          >Tico S. Thepsourinthone.</a
+        >
+        2018.
+      </h6>
     </footer>
 
     <script src="index.js"></script>
